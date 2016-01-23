@@ -1,0 +1,2 @@
+class HipstergramsController < ApplicationController
+end

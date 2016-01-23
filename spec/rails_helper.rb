@@ -8,7 +8,7 @@ require 'rspec/rails'
 require "capybara/rails"
 require "capybara/poltergeist"
 Capybara.javascript_driver
-require "suppor/databse_cleaner"
+require "support/databse_cleaner"
 
 
 

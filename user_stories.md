@@ -2,8 +2,16 @@
 
 
 As a hipster,
+So that I can be lazy,
+I want to be able to login in using Facebook.
+
+As a hipster,
 So that I can show others my top knot,
 I want to be able to post my hipstergrams online.
+
+As a hipster,
+So that I can explain my art,
+I want to be able to upload hipstergrams with a description.
 
 As a hipster, 
 So that I can interact with others, 

@@ -1,6 +1,9 @@
 require "rails_helper"
 
 RSpec.feature "hipstergrams" do
+
+  before { sign_in }
+  
   context "When no hipstergrams have been added" do
 
     scenario "It should display a prompt to upload an hipstergram" do
@@ -11,10 +14,6 @@ RSpec.feature "hipstergrams" do
   end
 
 
-  context "When hipstergram(s) have been added" do
-    scenario "Displays uploaded hipstergrams" do
-      visit "/"
-    end
-  end
+
 
 end

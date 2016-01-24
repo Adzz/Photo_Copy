@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160123204524) do
+ActiveRecord::Schema.define(version: 20160124010150) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,7 +24,10 @@ ActiveRecord::Schema.define(version: 20160123204524) do
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
     t.text     "description"
+    t.integer  "hipster_id"
   end
+
+  add_index "hipstergrams", ["hipster_id"], name: "index_hipstergrams_on_hipster_id", using: :btree
 
   create_table "hipsters", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -48,4 +51,5 @@ ActiveRecord::Schema.define(version: 20160123204524) do
   add_index "hipsters", ["hipstername"], name: "index_hipsters_on_hipstername", unique: true, using: :btree
   add_index "hipsters", ["reset_password_token"], name: "index_hipsters_on_reset_password_token", unique: true, using: :btree
 
+  add_foreign_key "hipstergrams", "hipsters"
 end

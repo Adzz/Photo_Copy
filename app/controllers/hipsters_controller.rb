@@ -1,0 +1,2 @@
+class HipstersController < ApplicationController
+end

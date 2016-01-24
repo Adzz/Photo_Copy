@@ -5,7 +5,13 @@ class Hipster < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable, :omniauthable, :omniauth_providers => [:facebook]
 
 attr_accessor :login
-  validate :validate_username
+  validate :validate_hipstername
+  validates :email, uniqueness: true
+  validates :hipstername, uniqueness: true
+  validates :password, confirmation: true
+  validates :password_confirmation, presence: true
+
+  has_many :hipstergrams
 
 def validate_hipstername
   if Hipster.where(email: hipstername).exists?

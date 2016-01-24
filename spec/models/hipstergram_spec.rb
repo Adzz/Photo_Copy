@@ -4,7 +4,8 @@ RSpec.describe Hipstergram, type: :model do
 
   it { should have_attached_file(:image) }
   it { should validate_attachment_presence(:image) }
-  
+  it { should belong_to(:hipster) }
+  #it { should have_many(:comments) } 
 
 
 end

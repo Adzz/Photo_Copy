@@ -7,7 +7,7 @@ require 'spec_helper'
 require 'rspec/rails'
 require "capybara/rails"
 require "capybara/poltergeist"
-Capybara.javascript_driver
+Capybara.javascript_driver = :poltergeist
 require "support/databse_cleaner"
 
 

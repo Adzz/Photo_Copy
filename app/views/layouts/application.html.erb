@@ -7,7 +7,16 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<%= yield %>
-
+  <%if hipster_signed_in?%>
+    <%= link_to "Sign out", destroy_hipster_session_path, method: :delete %>
+  <% else %>
+    <%= link_to "Sign in with Facebook", hipster_omniauth_authorize_path(:facebook) %>
+    <%= link_to "Sign up", new_hipster_registration_path %>
+    <%= link_to "Sign in", new_hipster_session_path %>
+  
+  <%= notice %>
+  <%= alert %>
+  <%= yield %>
+  <% end %>
 </body>
 </html>

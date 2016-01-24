@@ -6,6 +6,8 @@
   <div class="field">
     <%= f.label :hipstername %><br />
     <%= f.text_field :hipstername, autofocus: true %>
+    <%= f.label :email %><br />
+    <%= f.email_field :email %>
   </div>
 
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>

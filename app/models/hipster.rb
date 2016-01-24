@@ -7,11 +7,11 @@ class Hipster < ActiveRecord::Base
 attr_accessor :login
   validate :validate_hipstername
   validates :email, uniqueness: true
-  validates :hipstername, uniqueness: true
+  validates :hipstername, uniqueness: true, length: {minimum: 3}
   validates :password, confirmation: true
   validates :password_confirmation, presence: true
 
-  has_many :hipstergrams
+  has_many :hipstergrams, dependent: :destroy
 
 def validate_hipstername
   if Hipster.where(email: hipstername).exists?

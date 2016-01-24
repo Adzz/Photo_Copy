@@ -5,20 +5,20 @@ class Hipster < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable, :omniauthable, :omniauth_providers => [:facebook]
 
 attr_accessor :login
-  validate :validate_hipstername
-  validates :email, uniqueness: true
-  validates :hipstername, uniqueness: true, length: {minimum: 3}
+ # validate :validate_hipstername
+  #validates :email, uniqueness: true
+  #validates :hipstername, uniqueness: true
   validates :password, confirmation: true
   validates :password_confirmation, presence: true
 
   has_many :hipstergrams, dependent: :destroy
   has_many :like_before_cools
 
-def validate_hipstername
-  if Hipster.where(email: hipstername).exists?
-    errors.add(:hipstername, :invalid)
-  end
-end
+#def validate_hipstername
+ # if Hipster.where(email: hipstername).exists?
+ #   errors.add(:hipstername, :invalid)
+ # end
+#end
 
 def self.from_omniauth(auth)
   where(provider: auth.provider, uid: auth.uid).first_or_create! do |user|

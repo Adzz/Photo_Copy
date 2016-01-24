@@ -5,5 +5,7 @@ class HipstersController < ApplicationController
     
   end
 
+  
+
 
 end

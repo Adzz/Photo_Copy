@@ -9,8 +9,8 @@ RSpec.feature "Hipster can sign in and out" do
       expect(page).to have_content "Log in"
 
     end
-
   end
+
 
 
 end

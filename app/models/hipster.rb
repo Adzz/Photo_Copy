@@ -12,6 +12,7 @@ attr_accessor :login
   validates :password_confirmation, presence: true
 
   has_many :hipstergrams, dependent: :destroy
+  has_many :like_before_cools
 
 def validate_hipstername
   if Hipster.where(email: hipstername).exists?

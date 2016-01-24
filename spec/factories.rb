@@ -2,9 +2,10 @@
 include ActionDispatch::TestProcess
 
 FactoryGirl.define do 
+    
 
   factory :hipstergram do
-    avatar { fixture_file_upload(Rails.root.join('spec', 'photos', 'test.png'), 'image/png') }
+    image { fixture_file_upload(Rails.root.join('spec', 'photos', 'test.jpg'), 'image/jpg') }
   end
 
 

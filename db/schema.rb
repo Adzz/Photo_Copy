@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160124010150) do
+ActiveRecord::Schema.define(version: 20160124144352) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -51,5 +51,14 @@ ActiveRecord::Schema.define(version: 20160124010150) do
   add_index "hipsters", ["hipstername"], name: "index_hipsters_on_hipstername", unique: true, using: :btree
   add_index "hipsters", ["reset_password_token"], name: "index_hipsters_on_reset_password_token", unique: true, using: :btree
 
+  create_table "like_before_cools", force: :cascade do |t|
+    t.integer  "hipstergram_id"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
+
+  add_index "like_before_cools", ["hipstergram_id"], name: "index_like_before_cools_on_hipstergram_id", using: :btree
+
   add_foreign_key "hipstergrams", "hipsters"
+  add_foreign_key "like_before_cools", "hipstergrams"
 end

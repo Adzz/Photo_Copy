@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
-  resources :hipsters do
-    resources :hipstergrams
+  resources :hipstergrams do
+    resources :likes_before_cool
   end
 
   devise_for :hipsters, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }

@@ -9,6 +9,14 @@ $(document).ready(function() {
         likeCount.text(response.new_likes_before_cool_count);
     })
   })
+
+ $(".comment").on("click", function(event){
+  event.preventDefault();
+ 
+  var comment
+ })
+
+
 })
 
 

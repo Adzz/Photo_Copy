@@ -1,6 +1,7 @@
 ######### USER STORIES ###########
 
 
+
 As a hipster,
 So that I can be lazy,
 I want to be able to login in using Facebook.
@@ -20,6 +21,10 @@ I want to be able to comment on hipstergrams.
 As a hipster,
 So that others know I am a hipster,
 I want to be able to like a gram before it was cool.
+
+As a hipster, 
+So that I dont follow the crowd,
+I want hipstergrams to automatically delete when they become cool.
 
 As a hipster,
 So that I can protect my privacy,

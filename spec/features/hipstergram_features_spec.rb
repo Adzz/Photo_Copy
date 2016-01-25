@@ -4,7 +4,7 @@ RSpec.feature "hipstergrams" do
 
   before {
     sign_up
-    sign_in }
+    }
   
   context "When no hipstergrams have been added" do
 
@@ -19,10 +19,10 @@ RSpec.feature "hipstergrams" do
     
     scenario "An hipster can upload an hipstergram" do
         visit '/hipstergrams'
-        click_link 'Pick a photogram'
-        attach_file :post_image, './spec/images/test.jpg'
-        fill_in 'Description', with: 'Cold brew triple distilled mason water coffee'
-        click_button 'Share your art'
+        click_link 'Upload new hipstergram'
+        attach_file :hipstergram_image, './spec/photos/test.jpg'
+        fill_in :hipstergram_description, with: 'Cold brew triple distilled mason water coffee'
+        click_button 'Create Hipstergram'
 
         expect(page).to have_css 'img[src*=\'test.jpg\']'
         expect(page).to have_content 'Cold brew'

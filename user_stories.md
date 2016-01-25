@@ -26,15 +26,15 @@ As a hipster,
 So that I dont follow the crowd,
 I want hipstergrams to automatically delete when they become cool.
 
-As a hipster,
-So that I can protect my privacy,
-I want to be able to limit who can see my hipstergrams.
-
 As a photocopier,
 So that I can be individual,
 I would like to be able to apply generic filters to my hipstergrams. 
 
 ### EXTRAS ###
+
+As a hipster,
+So that I can protect my privacy,
+I want to be able to limit who can see my hipstergrams.
 
 As a hipster,
 So that I can see other hipstergrams,

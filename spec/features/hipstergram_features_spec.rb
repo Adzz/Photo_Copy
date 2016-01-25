@@ -2,9 +2,7 @@ require "rails_helper"
 
 RSpec.feature "hipstergrams" do
 
-  before {
-    sign_up
-    }
+  before { sign_up }
   
   context "When no hipstergrams have been added" do
 
@@ -16,18 +14,44 @@ RSpec.feature "hipstergrams" do
 
 
   context "When an hipstergram has been added" do
+
+    before { add_picture }
     
     scenario "An hipster can upload an hipstergram" do
-        visit '/hipstergrams'
-        click_link 'Upload new hipstergram'
-        attach_file :hipstergram_image, './spec/photos/test.jpg'
-        fill_in :hipstergram_description, with: 'Cold brew triple distilled mason water coffee'
-        click_button 'Create Hipstergram'
-
+       
         expect(page).to have_css 'img[src*=\'test.jpg\']'
         expect(page).to have_content 'Cold brew'
     end
     
+   xscenario "Hipstergrams can be commented on" do
+
+    end
+
+    xscenario "If a hipstergram gets too many likes and becomes cool, it is automatically deleted" do
+
+    end
+
+    xscenario "Hipstergrams can be filtered to look good" do
+
+    end
+
+    context "Deleting hipstergrams"do
+
+      xscenario "Only the hipster who uploaded the hipstergram can manually delete it." do
+
+      end
+
+      xscenario "When a hipstergram is deleted, all the likes go with it." do
+
+      end
+
+      xscenario "When a hipstergram is deleted, all the comments are deleted too" do
+
+      end
+
+    end
+
+
   end
 
 

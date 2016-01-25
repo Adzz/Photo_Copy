@@ -19,9 +19,9 @@ end
 
 
 def add_picture
-    visit '/hipstergrams'
-    click_link 'Upload new hipstergram'
-    attach_file :hipstergram_image, './spec/photos/test.jpg'
-    fill_in :hipstergram_description, with: 'Just some triple distilled mason water cold brew'
-    click_button 'Create Hipstergram'
+    visit "/hipstergrams"
+    click_link "Upload new hipstergram"
+    attach_file :hipstergram_image, "./spec/photos/test.jpg"
+    fill_in :hipstergram_description, with: "Cold brew triple distilled mason water coffee"
+    click_button "Create Hipstergram"
 end
